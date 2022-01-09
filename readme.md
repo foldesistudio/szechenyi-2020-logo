@@ -8,7 +8,7 @@ This WordPress plugin places a Széchenyi 2020 logo to the frontend to any posit
 **Donate link:** [PayPal](https://www.paypal.com/donate/?business=47DJVT44PCDGW&no_recurring=0&currency_code=HUF)
 
 **Tags:** floating content, floating logo, floating sidebar, floating wordpress sidebar, hungary, logo, popup, scrolling banner, scrolling sidebar, static block,
-sticky advertising, sticky sidebar, szechenyi, szechenyi 2020, szechenyi 2020 logo, wordpress sticky plugin,
+sticky advertising, sticky sidebar, szechenyi, szechenyi 2020, szechenyi 2020 logo, wordpress sticky plugin
 
 **Requires at least:** 5.0  
 
