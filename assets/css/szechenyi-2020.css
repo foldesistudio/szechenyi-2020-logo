@@ -1,0 +1,27 @@
+/*
+    Plugin:  Széchenyi 2020 logó
+*/
+
+#szechenyi_2020_logo {
+	z-index: 888888;
+}
+
+#szechenyi_2020_logo img {
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+#szechenyi_2020_logo a span.dashicons {
+	color: #0067b1;
+	text-decoration: none;
+}
+
+#szechenyi_2020_logo a:hover span.dashicons {
+	color: #034ea2;
+}
+
+

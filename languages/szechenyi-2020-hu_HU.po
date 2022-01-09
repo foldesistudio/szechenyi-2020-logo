@@ -1,0 +1,531 @@
+# Copyright (C) 2021 Földesi Mihály
+# This file is distributed under the same license as the Széchenyi 2020 Logo plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Széchenyi 2020 Logo 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/szechenyi-2020-"
+"logo\n"
+"Last-Translator: \n"
+"Language-Team: Magyar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-12-26T15:30:10+01:00\n"
+"PO-Revision-Date: 2022-01-03 09:57+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: szechenyi-2020\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.5.5; wp-5.8.2"
+
+#: modules/admin-settings-page.php:199
+msgid " This sets top space between logo element and its top border."
+msgstr "Beállítja a térközt a logó és a felső szegély között."
+
+#: modules/admin-settings-page.php:365
+msgid "About"
+msgstr "Névjegy"
+
+#: modules/admin-settings-page.php:71
+msgid "Absolute"
+msgstr "Abszolút"
+
+#: libs/admin/about.php:29
+msgid "Additional Thanks"
+msgstr "További köszönet"
+
+#: libs/admin/about.php:7
+msgid "Author"
+msgstr "Szerzőségi közlés"
+
+#: modules/admin-settings-page.php:115
+msgid "Background Color"
+msgstr "Háttérszín"
+
+#: modules/admin-settings-page.php:151
+msgid "Border Bottom"
+msgstr "Alsó szegély"
+
+#: modules/admin-settings-page.php:174
+msgid "Border Color"
+msgstr "Szegélyszín"
+
+#: modules/admin-settings-page.php:155
+msgid "Border Left"
+msgstr "Bal szegély"
+
+#: modules/admin-settings-page.php:156
+msgid "Border left Description"
+msgstr "Beállítja a bal szegély méretét."
+
+#: modules/admin-settings-page.php:186
+msgid "Border Radius"
+msgstr "Szegély megjelenése"
+
+#: modules/admin-settings-page.php:194
+msgid "Border Radius Size"
+msgstr "Szegély lekerekítési sugár"
+
+#: modules/admin-settings-page.php:147
+msgid "Border Right"
+msgstr "Jobb szegély"
+
+#: modules/admin-settings-page.php:143
+msgid "Border Top"
+msgstr "Felső szegély"
+
+#: modules/admin-settings-page.php:159
+msgid "Border Type"
+msgstr "Szegély típusa"
+
+#: modules/admin-settings-page.php:79
+msgid "Bottom"
+msgstr "Legalul"
+
+#: modules/admin-settings-page.php:91
+msgid "Close Button"
+msgstr "Bezárás gomb"
+
+#: libs/admin/sortcode.php:12
+msgid "Current slug:"
+msgstr "Jelenlegi csiga:"
+
+#: modules/admin-settings-page.php:214
+msgid "Custom CSS for Desktop"
+msgstr "Egyéni asztali CSS"
+
+#: modules/admin-settings-page.php:218
+msgid "Custom CSS for Mobile"
+msgstr "Egyéni mobil CSS"
+
+#: modules/admin-settings-page.php:163
+msgid "Dashed"
+msgstr "Szaggatott vonal"
+
+#: libs/admin/about.php:12
+msgid "Developer"
+msgstr "Fejlesztő"
+
+#: modules/admin-settings-page.php:230
+msgid "Divi"
+msgstr "Divi"
+
+#: modules/admin-credits.php:35
+msgid "Donate"
+msgstr "Adományozzunk"
+
+#: modules/admin-credits.php:29
+msgid "Donate and Rating"
+msgstr "Adományozás és értékelés"
+
+#: modules/admin-settings-page.php:164
+msgid "Dotted"
+msgstr "Pontozott vonal"
+
+#: modules/admin-settings-page.php:165
+msgid "Double"
+msgstr "Dupla vonal"
+
+#: libs/admin/about.php:31
+msgid "Dovi42 | (wpcreator.hu)"
+msgstr "Dovi42 | (wpcreator.hu)"
+
+#: modules/admin-settings-page.php:231
+msgid "Enfold"
+msgstr "Enfold"
+
+#: libs/admin/about.php:23
+msgid "Facebook"
+msgstr "Facebook"
+
+#: modules/admin-settings-page.php:70
+msgid "Fixed"
+msgstr "Rögzített"
+
+#. Author of the plugin
+msgid "Földesi Mihály"
+msgstr "Földesi Mihály"
+
+#: modules/admin-settings-page.php:166
+msgid "Groove"
+msgstr "Rovátkolt 3D-s vonal"
+
+#: modules/admin-settings-page.php:103
+msgid "Height"
+msgstr "Magasság"
+
+#: modules/admin-settings-page.php:83
+msgid "Horizontal Position"
+msgstr "Vízszintes elhelyezkedés "
+
+#. Author URI of the plugin
+msgid "https://foldesistudio.hu"
+msgstr "https://foldesistudio.hu"
+
+#. Plugin URI of the plugin
+msgid "https://foldesistudio.hu/szechenyi-2020-logo"
+msgstr "https://foldesistudio.hu/szechenyi-2020-logo"
+
+#: libs/admin/sortcode.php:16
+msgid "Insert content from shortcode:"
+msgstr "Tartalom beszúrása a shortcode:"
+
+#: libs/admin/sortcode.php:6
+msgid "Insert shortcode"
+msgstr "Helyezze shortcode"
+
+#: modules/admin-settings-page.php:167
+msgid "Inset"
+msgstr "Belső 3D-s vonal"
+
+#: modules/admin-credits.php:37
+msgid "Join us on Github"
+msgstr "Csatlakozás a Github oldalhoz"
+
+#: modules/admin-credits.php:32
+msgid "Leave a review and give ★★★★★ rating"
+msgstr "Vélemény és értékelés ★★★★★  megosztása"
+
+#: modules/admin-settings-page.php:86
+msgid "Left"
+msgstr "Bal oldalra igazított"
+
+#: modules/admin-settings-page.php:135
+msgid "Margin Bottom"
+msgstr "Alsó margó"
+
+#: modules/admin-settings-page.php:139
+msgid "Margin Left"
+msgstr "Bal margó"
+
+#: modules/admin-settings-page.php:131
+msgid "Margin Right"
+msgstr "Jobb margó"
+
+#: modules/admin-settings-page.php:127
+msgid "Margin Top"
+msgstr "Felső margó"
+
+#: libs/admin/about.php:13
+msgid "Mihály Földesi"
+msgstr "Földesi Mihály"
+
+#: modules/admin-settings-page.php:95 modules/admin-settings-page.php:119
+#: modules/admin-settings-page.php:178
+msgid "No"
+msgstr "Nem"
+
+#: modules/admin-settings-page.php:162 modules/admin-settings-page.php:229
+msgid "None"
+msgstr "Nincs"
+
+#: modules/admin-settings-page.php:168
+msgid "Outset"
+msgstr "Külső 3D-s vonal"
+
+#: modules/admin-settings-page.php:206
+msgid "Padding Bottom"
+msgstr "Alsó kitöltés"
+
+#: modules/admin-settings-page.php:210
+msgid "Padding Left"
+msgstr "Bal kitöltés"
+
+#: modules/admin-settings-page.php:202
+msgid "Padding Right"
+msgstr "Jobb kitöltés"
+
+#: modules/admin-settings-page.php:198
+msgid "Padding Top"
+msgstr "Felső kitöltés"
+
+#: modules/admin-settings-page.php:222
+msgid "Page URL"
+msgstr "Céloldal hiperhivatkozása"
+
+#: modules/admin-settings-page.php:111
+msgid "Percent"
+msgstr "Százalék"
+
+#: modules/admin-settings-page.php:110
+msgid "Pixel"
+msgstr "Pixel"
+
+#. translators: %s is replaced with "URL"
+#: modules/admin-notification.php:11
+msgid ""
+"Please don't forget to <a href=\"%s\" target=\"_blank\">rate the plugin!</a>"
+msgstr ""
+"Ne felejtsük el <a href=\"%s\" target=\"_blank\">értékelni és "
+"véleményezni</a> a beépülő modult!"
+
+#: modules/plugin-page.php:16
+msgid "Please rating!"
+msgstr "Vélemény és értékelés megosztása"
+
+#: modules/admin-settings-page.php:67
+msgid "Position Place"
+msgstr "Pozícionálás"
+
+#: libs/admin/about.php:32
+msgid "Péter Földesi"
+msgstr "Földesi Péter"
+
+#: modules/admin-settings-page.php:169
+msgid "Ridge"
+msgstr "Domború 3D-s vonal"
+
+#: modules/admin-settings-page.php:87
+msgid "Right"
+msgstr "Jobb oldalra igazított"
+
+#: modules/admin-settings-page.php:190
+msgid "Round Cornor"
+msgstr "Lekerekített sarkok"
+
+#: modules/admin-settings-page.php:123
+msgid "Set Background Color"
+msgstr "Háttérszín kiválasztása"
+
+#: modules/admin-settings-page.php:182
+msgid "Set Border Color"
+msgstr "Szegélyszín kiválasztása"
+
+#: modules/admin-settings-page.php:364
+msgid "Setup"
+msgstr "Beállítások"
+
+#: modules/admin-settings-page.php:170
+msgid "Solid"
+msgstr "Folytonos vonal"
+
+#: modules/admin-settings-page.php:124
+msgid "Specifies the background color."
+msgstr "Meghatározza a háttér színét."
+
+#: modules/admin-settings-page.php:183
+msgid "Specifies the border color."
+msgstr "Meghatározza a szegély színét."
+
+#: modules/admin-settings-page.php:189
+msgid "Straight Cornor"
+msgstr "Szögletes sarkok"
+
+#: modules/admin-credits.php:31
+msgid ""
+"Szécehnyi 2020 Logo is a free plugin. If you find it useful then a review on "
+"wordpress.org would be most appreciated!"
+msgstr ""
+"A Széchenyi 2020 logó egy ingyenes beépülő modul. Ha hasznosnak találjuk, "
+"akkor egy pozitív véleményt a beépülő modul készítője szívesen fogad a "
+"hivatalos wordpress.org oldalon!"
+
+#: modules/admin-notification.php:9
+msgid "Széchenyi 2020"
+msgstr "Széchenyi 2020"
+
+#: modules/admin-settings-page.php:38
+msgid "Széchenyi 2020 Custom Settings"
+msgstr "Széchenyi 2020 logó személyreszabása"
+
+#. Plugin Name of the plugin
+#: modules/admin-settings-page.php:347 modules/admin-settings-page.php:348
+#: modules/admin-settings-page.php:403 modules/plugin-page.php:44
+msgid "Széchenyi 2020 Logo"
+msgstr "Széchenyi 2020 logó"
+
+#: modules/frontend.php:169
+#| msgid "Széchenyi 2020 logo at bottom postion"
+msgid "Széchenyi 2020 logo at bottom position"
+msgstr "Széchenyi 2020 logó az alsó pozícióban"
+
+#: modules/frontend.php:171
+#| msgid "Széchenyi 2020  logo at top postion"
+msgid "Széchenyi 2020 logo at top position"
+msgstr "Széchenyi 2020 logó a felső pozícióban"
+
+#: libs/shortcodes/szechenyi-2020-logo-debug.php:141
+msgid "Széchenyi 2020 message:"
+msgstr "Széchenyi 2020 üzenet:"
+
+#: modules/admin-settings-page.php:226
+msgid "Theme Fix"
+msgstr "Sablon javítása"
+
+#: modules/admin-settings-page.php:84
+msgid "This affects the horizontal position of a positioned logo element."
+msgstr "Beállítja a logó vízszintes elhelyezkedését."
+
+#: modules/admin-settings-page.php:187
+msgid "This affects the sort of logo element's border style."
+msgstr "Meghatározza, hogy a szegély milyen külalakú legyen."
+
+#: modules/admin-settings-page.php:76
+msgid "This affects the vertical position of a positioned logo element."
+msgstr "Beállítja a logó függőleges elhelyezkedését."
+
+#: modules/admin-settings-page.php:92
+msgid "This affects to turn the logo element to closeable."
+msgstr "Bezárhatóvá teszi a logót. "
+
+#: modules/admin-settings-page.php:195
+msgid ""
+"This defines the radius of the logo element's corners. You can set it Round "
+"Cornor is selected."
+msgstr ""
+"A sarkok lekerekítés sugarának megadása. Ez akkor érhető el, ha a "
+"„lekerekített sarkok” opció van kiválasztva. "
+
+#. Description of the plugin
+msgid ""
+"This plugin places a Széchenyi 2020 logo to the frontend to any position."
+msgstr ""
+"Egyszerűen, de nagyszerűen elhelyezi a Széchenyi 2020 logót a honlapon."
+
+#: modules/admin-settings-page.php:207
+msgid "This sets bottom space between logo element and its bottom border."
+msgstr "Beállítja a térközt a logó és az alsó szegély között."
+
+#: modules/admin-settings-page.php:215
+msgid "This sets custom css for desktop sizes."
+msgstr ""
+"Az alapértelmezett képernyőméretekhez egyéni CSS-t megadása. Csak is "
+"szakértőknek!"
+
+#: modules/admin-settings-page.php:219
+msgid "This sets custom css for mobile sizes."
+msgstr "A mobil képernyőméretekhez egyéni CSS megadása. Csak is szakértőknek!"
+
+#: modules/admin-settings-page.php:211
+msgid "This sets left space between logo element and its left border."
+msgstr "Beállítja a térközt a logó és a bal szegély között."
+
+#: modules/admin-settings-page.php:223
+msgid "This sets page address of destination."
+msgstr ""
+"A logóra való kattintással a megadott URL-re ugrik! Csupán másoljuk ki a "
+"böngésző címsorából például azt a teljes címet, ami a pályázatok oldalát "
+"tartalmazza. "
+
+#: modules/admin-settings-page.php:203
+msgid "This sets right space between logo element and its right border."
+msgstr "Beállítja a térközt a logó és a bal szegély között."
+
+#: modules/admin-settings-page.php:227
+msgid ""
+"This sets some CSS fixes for theme. Sometimes logo element hides "
+"functionality of scroll to top."
+msgstr ""
+"Ez a gyors CSS javítás megoldja azt a néha előforduló problémát, amikor a "
+"logó eltakarja a jobb alsó sarokban lévő ún. „vissza az oldal tetejére” "
+"funkciót."
+
+#: modules/admin-settings-page.php:116
+msgid "This sets the background color of logo element."
+msgstr "Beállítja a logó háttérszínét."
+
+#: modules/admin-settings-page.php:152
+msgid "This sets the bottom border of logo element."
+msgstr "Beállítja az alsó szegély méretét."
+
+#: modules/admin-settings-page.php:136
+msgid "This sets the bottom margin of logo element."
+msgstr "Beállítja az alsó margó térközét. "
+
+#: modules/admin-settings-page.php:175
+#| msgid "This sets the color of an element's all borders."
+msgid "This sets the color of logo element's all borders."
+msgstr "Beállítja a logó szegélyének színét. "
+
+#: modules/admin-settings-page.php:104
+msgid "This sets the height of logo element."
+msgstr "Beállítja a logó magasságát.."
+
+#: modules/admin-settings-page.php:140
+msgid "This sets the left margin of logo element."
+msgstr "Beállítja a bal margó térközét. "
+
+#: modules/admin-settings-page.php:148
+msgid "This sets the right border of logo element."
+msgstr "Beállítja a belső szegély méretét."
+
+#: modules/admin-settings-page.php:132
+msgid "This sets the right margin of logo element."
+msgstr "Beállítja a felső bal térközét. "
+
+#: modules/admin-settings-page.php:160
+msgid "This sets the style of logo element's  border"
+msgstr "Meghatározza a logó szegélyének a stílusát."
+
+#: modules/admin-settings-page.php:144
+msgid "This sets the top border of logo element."
+msgstr "Beállítja a felső szegély méretét."
+
+#: modules/admin-settings-page.php:128
+msgid "This sets the top margin of logo element."
+msgstr "Beállítja a felső margó térközét. "
+
+#: modules/admin-settings-page.php:100
+msgid "This sets the width of logo element."
+msgstr "Beállítja a logó szélességét."
+
+#: modules/admin-settings-page.php:68
+msgid ""
+"This specifies the type of positioning method used for logo element. If "
+"fixed is selected,  it is positioned relative to the viewport, which means "
+"it always stays in the same place even if the page is scrolled."
+msgstr ""
+"Meghatározza a logóhoz használt pozicionálási módszer típusát. Ha a "
+"„rögzített” lehetőség van kiválasztva, akkor a logó „lebegni” fog a görgetés "
+"közben is."
+
+#: modules/admin-settings-page.php:78
+msgid "Top"
+msgstr "Legfelül"
+
+#: modules/admin-settings-page.php:108
+#| msgid ""
+#| "Type of sizing. If percentages is selected, it allow the sizing of logo "
+#| "element relative to their containing page."
+msgid ""
+"Type of sizing. If percentages is selected, it allows the sizing of logo "
+"element relative to their containing page."
+msgstr "Méretezés mértékegységének meghatározása. "
+
+#: modules/admin-settings-page.php:107
+msgid "Unit"
+msgstr "Mértékegyég"
+
+#: modules/admin-settings-page.php:75
+msgid "Vertical Position"
+msgstr "Függőleges elhelyezkedés "
+
+#: libs/admin/about.php:17
+msgid "Website"
+msgstr "Honlap"
+
+#: modules/admin-settings-page.php:449
+#| msgid ""
+#| "Welcome on admin settings page of Széchenyi 2020 Logo. If you would like "
+#| "you can modify default parameters manually with this form.\n"
+#| "\t\t\t The current default settings are for guidance only. The developer "
+#| "of the plug-in assumes no any responsibility. "
+msgid ""
+"Welcome on admin settings page of Széchenyi 2020 Logo. If you would like you "
+"can modify default parameters manually with this form. The current default "
+"settings are for guidance only. The developer of the plug-in assumes no any "
+"responsibility. "
+msgstr ""
+"Amennyiben szeretnénk, lehetőségünk van az alábbi beállítások segítségével a "
+"Széchenyi 2020 logó elhelyezésén finomítani.  A jelenlegi alapértelmezett "
+"beállítások csupán tájékoztató jellegűek. A beépülő modul fejlesztője "
+"semmilyen felelősséget nem vállal."
+
+#: modules/admin-settings-page.php:99
+msgid "Width"
+msgstr "Szélesség"
+
+#: modules/admin-settings-page.php:94 modules/admin-settings-page.php:118
+#: modules/admin-settings-page.php:177
+msgid "Yes"
+msgstr "Igen"
