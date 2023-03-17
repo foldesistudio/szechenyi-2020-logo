@@ -10,7 +10,7 @@
 	 * License URI:          https://creativecommons.org/licenses/by/4.0/
 	 * Text Domain:          szechenyi-2020
 	 * Requires at least:    5.0
-	 * Tested up to:         5.8.2
+	 * Tested up to:         6.2
 	 * Requires PHP:         7.0
 	 *
 	 * @author               Földesi, Mihály
