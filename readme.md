@@ -12,7 +12,7 @@ sticky advertising, sticky sidebar, szechenyi, szechenyi 2020, szechenyi 2020 lo
 
 **Requires at least:** 5.0  
 
-**Tested up to:** 5.9
+**Tested up to:** 6.2
 
 **Requires PHP:** 7.0
 
