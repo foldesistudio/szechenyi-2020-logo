@@ -56,7 +56,7 @@ No, you cannot. After activating, the floating logo is displayed on all parts of
 No, it does not. This plugin does not use any shortcode to display on websites.
 
 ### How can I modify the default settings? ###
-If you wish, you can modify the default placing parameters manually under Settings > Széchenyi 2020 Logo. 
+If you wish, you can modify the default placing parameters manually under `Settings` > `Széchenyi 2020 Logo`. 
 You can also use the top admin bar or WP-CLI command-line interface to modify these.
 
 ### What do I need to use the WP-CLI command-line interface? ### 
