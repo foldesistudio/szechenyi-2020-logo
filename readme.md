@@ -23,10 +23,9 @@ sticky advertising, sticky sidebar, szechenyi, szechenyi 2020, szechenyi 2020 lo
 
 ## Description ##
 
-Széchenyi 2020 Logo is an all-in-one plug-in with easy to use controls. It helps you place a Széchenyi logo as sticky footer or sticky header.
-If you would like you can modify default placing parameters manually.
+Széchenyi 2020 Logo is an all-in-one plug-in with easy-to-use controls. It helps you place a Széchenyi logo as a sticky footer or sticky header. If you wish, you can modify the default placing parameters manually.
 
-All parameters of settings are stored as transients. It means final rendered HTML and CSS source codes on frontend are stored in the cache system of WordPress.
+All settings parameters are stored as transients. This means that the final rendered HTML and CSS source codes on the front end are stored in the WordPress cache system.
 
 ## Languages ##
 
@@ -50,19 +49,18 @@ This is an unofficial plug-in and completely a hobby project. Széchenyi logos s
 
 ## Frequently Asked Questions ##
 
-### Can I control floating logo to display only on the selected pages / posts / category? ###
-No, you cannot. After activating, a floating logo is displayed on your all website's parts.
+### Can I control floating logo to display only on selected pages / posts / categories? ###
+No, you cannot. After activating, the floating logo is displayed on all parts of your website.
 
-### Does it need shortcode to display floating logo on website? ###
-No, you do not. This plug-in does not use any shortcode to display on websites.
+### Does it require a shortcode to display the floating logo on the website? ###
+No, it does not. This plugin does not use any shortcode to display on websites.
 
 ### How can I modify the default settings? ###
-If you would like you can modify default placing parameters manually under `Settings` >` Széchenyi 2020 Logo`.
-As well as you are able to use top adminbar or WP-CLI command-line interface to modify these.
+If you wish, you can modify the default placing parameters manually under Settings > Széchenyi 2020 Logo. 
+You can also use the top admin bar or WP-CLI command-line interface to modify these.
 
 ### What do I need to use the WP-CLI command-line interface? ### 
-Use `wp szechenyi-2020-logo help` in the command-line to see more about basic commands.
-In order to use WP-CLI, you will need to have WP-CLI installed on your hosting server (it does not come with WordPress by default).
+Use `wp szechenyi-2020-logo help` in the command-line to learn more about basic commands. To use WP-CLI, you will need to have it installed on your hosting server (it does not come with WordPress by default).
 
 ### Is it the official plugin? ###
 No, it is not. This is a hobby project.
