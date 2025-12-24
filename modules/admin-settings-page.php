@@ -402,7 +402,9 @@
             <div class="wrap">
                 <h1 class="wp-heading-inline"><?php esc_attr_e('Széchenyi 2020 Logo', 'szechenyi-2020'); ?></h1>
 				<?php
-					$active_tab = isset($_GET['szechenyi-2020-tab']) ? sanitize_text_field($_GET['szechenyi-2020-tab']) : 'setup';
+					// Security: Validate tab against allowlist to prevent Local File Inclusion
+					$requested_tab = isset($_GET['szechenyi-2020-tab']) ? sanitize_text_field($_GET['szechenyi-2020-tab']) : 'setup';
+					$active_tab = in_array($requested_tab, $tabs_key, true) ? $requested_tab : 'setup';
 				?>
                 <h2 class="nav-tab-wrapper">
 					<?php for ($i = 0; $i <= count($tabs_key) - 1; $i++) { ?>
@@ -429,8 +431,25 @@
 								<?php
 								break;
 							
+							case 'about':
+								// Security: Explicit allowlisted file path
+								szechenyi_2020_619_include('/libs/admin/about.php');
+								break;
+							
 							default:
-								szechenyi_2020_619_include('/libs/admin/' . $active_tab . '.php');
+								// Security: Fallback to setup if somehow an invalid tab gets through
+								?>
+                                <div class="card">
+                                    <form method="post" action="options.php">
+										<?php
+											settings_fields('szechenyi_2020_option_main');
+											do_settings_sections('szechenyi-2020-setting-admin');
+											submit_button();
+										?>
+                                    </form>
+                                </div>
+								<?php
+								break;
 						}
 					?>
 					

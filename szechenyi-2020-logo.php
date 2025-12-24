@@ -3,7 +3,7 @@
 	 * Plugin Name:          Széchenyi 2020 Logo
 	 * Plugin URI:           https://foldesistudio.hu/szechenyi-2020-logo
 	 * Description:          This plugin places a Széchenyi 2020 logo to the frontend to any position.
-	 * Version:              1.1
+	 * Version:              1.2
 	 * Author:               Földesi Mihály
 	 * Author URI:           https://foldesistudio.hu
 	 * License:              Attribution 4.0 International (CC BY 4.0)
@@ -36,7 +36,7 @@
 	
 	define('SZECHENYI_2020_619_ROOT', dirname(__FILE__));
 	define('SZECHENYI_2020_619_FILE', __FILE__);
-	define('SZECHENYI_2020_619_VERSION', '1.0');
+	define('SZECHENYI_2020_619_VERSION', '1.2');
 	if (!defined('SZECHENYI_2020_619_WP_ROOT')) {
 		// for Debian users
 		$path = explode(DS, SZECHENYI_2020_619_ROOT);
