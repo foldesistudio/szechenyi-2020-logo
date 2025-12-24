@@ -16,7 +16,7 @@ sticky advertising, sticky sidebar, szechenyi, szechenyi 2020, szechenyi 2020 lo
 
 **Requires PHP:** 7.0
 
-**Stable tag:** 1.1
+**Stable tag:** 1.2
 
 **License:** [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -68,6 +68,11 @@ No, it is not. This is a hobby project.
 
 ## Changelog ##
 
+### 1.2 ###
+* **SECURITY FIX:** Fixed Local File Inclusion (LFI) vulnerability in admin settings page
+* Added allowlist validation for tab parameter to prevent directory traversal attacks
+* Hardcoded file paths for admin tabs instead of dynamic inclusion
+
 ### 1.1 ###
 * Added WP-CLI support (see `wp szechenyi-2020-logo help` command)
 * Fixed transients clearing
@@ -77,6 +82,9 @@ No, it is not. This is a hobby project.
 * Initial Release
 
 ## Upgrade Notice ##
+
+### 1.2 ###
+* **CRITICAL SECURITY UPDATE:** Fixes Local File Inclusion vulnerability. Please update immediately!
 
 ### 1.1 ###
 * Added WP-CLI support and some improvements
