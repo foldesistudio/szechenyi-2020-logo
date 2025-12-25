@@ -4,8 +4,9 @@
 */
 
 (function ($) {
-	$('.szechenyi_2020_close').click(function(){
-		var szechenyi_2020_id = $(this).closest('div').attr('id');
-		$('#'+szechenyi_2020_id).hide();
+	$('.szechenyi_2020_close').click(function(e){
+		e.preventDefault();
+		let szechenyi_2020_id = $(this).closest('div').attr('id');
+		$('#' + szechenyi_2020_id).fadeOut(200);
 	});
 })(jQuery);

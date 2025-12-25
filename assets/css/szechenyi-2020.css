@@ -3,25 +3,40 @@
 */
 
 #szechenyi_2020_logo {
-	z-index: 888888;
+    z-index: 888888;
 }
 
 #szechenyi_2020_logo img {
-	border: none;
-	padding: 0;
-	margin: 0;
-	display: inline-block;
-	max-width: 100%;
-	height: auto;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
 }
 
 #szechenyi_2020_logo a span.dashicons {
-	color: #0067b1;
-	text-decoration: none;
+    color: #0067b1;
+    text-decoration: none;
 }
 
 #szechenyi_2020_logo a:hover span.dashicons {
-	color: #034ea2;
+    color: #034ea2;
 }
 
+#szechenyi_2020_logo .szechenyi_2020_close.bottom {
+    position: fixed;
+}
+
+#szechenyi_2020_logo .szechenyi_2020_close.top {
+    position: absolute;
+    bottom: 0;
+}
+
+.szechenyi-2020-block-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 

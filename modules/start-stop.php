@@ -1,4 +1,9 @@
 <?php
+/**
+ * Activation and deactivation
+ *
+ * @package szechenyi-2020-logo
+ */
 	if ( ! defined( 'ABSPATH' ) ) exit;
 /**
 * Efficiently Flush Rewrite Rules After Plugin Activation

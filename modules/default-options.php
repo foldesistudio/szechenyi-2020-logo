@@ -1,6 +1,10 @@
 <?php
+/**
+ * Default options
+ *
+ * @package szechenyi-2020-logo
+ */
 	if (!defined('ABSPATH')) exit;
-	
 	function szechenyi_2020_619_get_options()
 	{
 		

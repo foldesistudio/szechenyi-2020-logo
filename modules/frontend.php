@@ -1,18 +1,23 @@
 <?php
+/**
+ * Frontend
+ *
+ * @package szechenyi-2020-logo
+ */
 	if (!defined('ABSPATH')) exit;
 	
 	/**
 	 * Register scripts on the frontend
 	 */
 	if (!is_admin()) {
-		
-		
+
+
 		add_action('wp_enqueue_scripts', 'szechenyi_2020_619_styles_to_frontend');
 		add_action('wp_footer', 'szechenyi_2020_619_logo');
 		add_action('wp_footer', 'szechenyi_2020_619_scripts_to_frontend');
-		
+
 	}
-	
+
 	function szechenyi_2020_619_styles_to_frontend()
 	{
 		if (file_exists(SZECHENYI_2020_619_ROOT . DS . 'assets' . DS . 'css' . DS . 'szechenyi-2020.css')) {
@@ -118,7 +123,7 @@
 		$styling .= "}" . "\n";
 		
 		
-		/* TODO: Dektop és asztali CSS-t megoldani */
+		/* TODO: Add separate custom CSS support for desktop and mobile. */
 		//$styling .= $option['misi_szechenyi2020_css_custom_desktop'] . "\n";
 		//$styling .= $option['misi_szechenyi2020_css_custom_mobile'] . "\n";
 		
@@ -138,7 +143,7 @@
 	{
 		$options = get_option('szechenyi_2020_options');
 		$option_close_button = $options['misi_szechenyi2020_close_button'] ?? NULL;
-		
+
 		if (file_exists(SZECHENYI_2020_619_ROOT . DS . 'assets' . DS . 'js' . DS . 'szechenyi-2020.js') and $option_close_button == "yes") {
 			wp_register_script('szechenyi-2020', plugins_url('/assets/js/szechenyi-2020.js', SZECHENYI_2020_619_FILE), array('jquery'), SZECHENYI_2020_619_VERSION, true);
 			wp_enqueue_script('szechenyi-2020');
@@ -155,10 +160,10 @@
 		$option_url = $options['misi_szechenyi2020_page_url'];
 		$html_width = ($option_position_unit == 'px') ? $option_position_width . $option_position_unit : '100%';
 		$content = '<div id="szechenyi_2020_logo" class="szechenyi_2020_logo">';
-		
+
 		if ($option_close_button == "yes") {
 			$content .= '
-				<a href="javascript:void()" class="szechenyi_2020_close">
+				<a href="javascript:void()" class="szechenyi_2020_close ' .$option_position_y . '">
 				<span class="dashicons dashicons-dismiss"></span>
 				</a>';
 		}
@@ -169,7 +174,7 @@
 			$content .= '<img src="' . plugins_url('assets' . DS . 'images' . DS . 'szechenyi-2020-logo-' . $option_position_y . '.png', SZECHENYI_2020_619_PLUGIN_BASE) . '" alt="' . __('Széchenyi 2020 logo at bottom position', 'szechenyi-2020') . '" width="'. $html_width .'" loading="lazy" />';
 		} else {
 			$content .= '<img src="' . plugins_url('assets' . DS . 'images' . DS . 'szechenyi-2020-logo-' . $option_position_y . '.png', SZECHENYI_2020_619_PLUGIN_BASE) . '" alt="' . __('Széchenyi 2020 logo at top position', 'szechenyi-2020') . '" width="'. $html_width .'" loading="lazy" />';
-			
+
 		}
 		if (!empty($option_url)) {
 			$content .= '</a>';

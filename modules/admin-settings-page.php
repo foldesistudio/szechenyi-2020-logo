@@ -1,4 +1,9 @@
 <?php
+/**
+ * Admin settings
+ *
+ * @package szechenyi-2020-logo
+ */
 	if (!defined('ABSPATH')) exit;
 	
 	new szechenyi_2020_619_settings();
@@ -238,16 +243,13 @@
 		{
 			$settings_all = $this->fillable();
 			$settings_unwanted_beta = [
-				// Todo: Release on v1.1.0
+				// Todo: Release on v1.3.0
 				'misi_szechenyi2020_padding_top',
 				'misi_szechenyi2020_padding_right',
 				'misi_szechenyi2020_padding_bottom',
 				'misi_szechenyi2020_padding_left',
 				
-				// Todo: Release on v1.1.1
-				'misi_szechenyi2020_close_button',
-				
-				// Todo: Release on v1.1.2
+				// Todo: Release on v1.3.1
 				'misi_szechenyi2020_background_color_turn_on',
 				'misi_szechenyi2020_background_color',
 				'misi_szechenyi2020_border_top',
@@ -260,11 +262,11 @@
 				'misi_szechenyi2020_border_radius',
 				'misi_szechenyi2020_border_radius_size',
 				
-				// Todo: Release on v1.1.3
+				// Todo: Release on v1.3.2
 				'misi_szechenyi2020_css_custom_desktop',
 				'misi_szechenyi2020_css_custom_mobile',
 				
-				// Todo: Release on v1.1.4
+				// Todo: Release on v1.3.3
 				'misi_szechenyi2020_theme',
 				'misi_szechenyi2020_height',
 			];
@@ -282,15 +284,6 @@
 		 */
 		public function expanded_alowed_tags() {
 			$my_allowed = wp_kses_allowed_html( 'post' );
-			// iframe
-            /*	$my_allowed['iframe'] = array(
-				'src'             => array(),
-				'height'          => array(),
-				'width'           => array(),
-				'frameborder'     => array(),
-				'allowfullscreen' => array(),
-			);*/
-			// form fields - input
 			$my_allowed['input'] = array(
 				'class' => array(),
 				'id'    => array(),
@@ -358,24 +351,20 @@
 			$this->options = szechenyi_2020_619_get_options();
 			$tabs_key = [
 				'setup',
+                'change-logo',
 				'about'
 			];
 			$tabs_text = [
 				__('Setup', 'szechenyi-2020'),
+                __('Change Logo', 'szechenyi-2020'),
 				__('About', 'szechenyi-2020')
 			];
-			
 			?>
             <style>
-				
 				.form-table td {
 					padding: 10px;
 				}
-				
-				
-				/*				.form-table tr:nth-child(even) {
-									background-color: #f6f7f7;
-								}*/
+
                 <?php
 							$option = get_option('szechenyi_2020_options');
 			
@@ -402,8 +391,11 @@
             <div class="wrap">
                 <h1 class="wp-heading-inline"><?php esc_attr_e('Széchenyi 2020 Logo', 'szechenyi-2020'); ?></h1>
 				<?php
-					$active_tab = isset($_GET['szechenyi-2020-tab']) ? sanitize_text_field($_GET['szechenyi-2020-tab']) : 'setup';
-				?>
+					$active_tab = isset($_GET['szechenyi-2020-tab']) ? sanitize_key($_GET['szechenyi-2020-tab']) : 'setup';
+					if (!in_array($active_tab, $tabs_key, true)) {
+						$active_tab = 'setup';
+					}
+ 				?>
                 <h2 class="nav-tab-wrapper">
 					<?php for ($i = 0; $i <= count($tabs_key) - 1; $i++) { ?>
                         <a href="<?php echo esc_attr(esc_url(get_admin_url())); ?>options-general.php?page=szechenyi-2020-setting-admin&szechenyi-2020-tab=<?php echo esc_attr($tabs_key[$i]); ?>"
@@ -414,7 +406,7 @@
 					
 					<?php
 						switch ($active_tab) {
-							
+
 							case 'setup':
 								?>
                                 <div class="card">
@@ -428,12 +420,70 @@
                                 </div>
 								<?php
 								break;
-							
-							default:
-								szechenyi_2020_619_include('/libs/admin/' . $active_tab . '.php');
-						}
-					?>
-					
+
+                            case 'change-logo':
+                                ?>
+                                <div class="card">
+                                    <h2><?php esc_attr_e('Change Logo', 'szechenyi-2020'); ?></h2>
+                                    <ul>
+                                        <li>
+                                            <?php esc_attr_e('This plugin is designed to display a single logo in a clean and reliable way. Do you need a different logo or a fully branded variant? If you need to change the logo image, please contact the developer.', 'szechenyi-2020'); ?>
+                                        </li>
+                                        <li>
+                                            <span class="dashicons dashicons-businessman"></span>
+                                            <?php esc_attr_e('Developer', 'szechenyi-2020'); ?>:
+                                            <?php esc_attr_e('Mihály Földesi', 'szechenyi-2020'); ?>
+                                        </li>
+                                        <li>
+                                            <span class="dashicons dashicons-admin-media"></span>
+                                            <?php esc_attr_e('Website', 'szechenyi-2020'); ?>:
+                                            <a href="https://foldesistudio.hu/kapcsolat" target="_blank">foldesistudio.hu/kapcsolat</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <?php
+                                break;
+
+							case 'about':
+								?>
+								<div class="card">
+									<h2><?php esc_attr_e('Author', 'szechenyi-2020'); ?></h2>
+									<ul>
+										<li>
+											<span class="dashicons dashicons-businessman"></span>
+											<?php esc_attr_e('Developer', 'szechenyi-2020'); ?>:
+											<?php esc_attr_e('Mihály Földesi', 'szechenyi-2020'); ?>
+										</li>
+										<li>
+											<span class="dashicons dashicons-admin-media"></span>
+											<?php esc_attr_e('Website', 'szechenyi-2020'); ?>:
+											<a href="https://foldesistudio.hu" target="_blank">foldesistudio.hu</a>
+										</li>
+										<li>
+											<span class="dashicons dashicons-facebook"></span>
+											<?php esc_attr_e('Facebook', 'szechenyi-2020'); ?>:
+											<a href="https://fb.com/foldesistudio" target="_blank">fb.com/foldesistudio</a>
+										</li>
+									</ul>
+								</div>
+								<div class="card">
+									<h2><?php esc_attr_e('Additional Thanks', 'szechenyi-2020'); ?></h2>
+									<ul>
+										<li><?php esc_attr_e('Dovi42 | (wpcreator.hu)', 'szechenyi-2020'); ?></li>
+										<li><?php esc_attr_e('Péter Földesi', 'szechenyi-2020'); ?></li>
+									</ul>
+								</div>
+								<?php
+								break;
+
+ 							default:
+ 								// Unknown tab: fall back to setup (no dynamic includes).
+ 								break;
+ 						}
+ 					?>
+
 					<?php require 'admin-credits.php'; ?>
                 </div>
             </div>
@@ -455,20 +505,20 @@
 			$html .= '<select name="szechenyi_2020_options[misi_szechenyi2020_position_place]" id="misi_szechenyi2020_position_place">';
 			foreach ($this->fillable()['misi_szechenyi2020_position_place']['values'] as $key => $item) {
 				$html .= '<option value="' . $key . '"';
-				
+
 				if ($this->options['misi_szechenyi2020_position_place'] == $key) {
 					$html .= ' selected';
 				}
-				
+
 				$html .= '>' . $item . '</option>';
 			}
-			
+
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_position_place']['description'] . '</small>';
-			
+
      		echo wp_kses($html ,$this->expanded_alowed_tags());
-			
-			
+
+
 		}
 		
 		public function misi_szechenyi2020_position_y_callback()
@@ -487,7 +537,7 @@
 			
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_position_y']['description'] . '</small>';
-			
+
 			echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
@@ -507,7 +557,7 @@
 			
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_position_x']['description'] . '</small>';
-			
+
 			echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
@@ -527,7 +577,7 @@
 			
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_close_button']['description'] . '</small>';
-			
+
 			echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
@@ -535,18 +585,18 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_width]" id="misi_szechenyi2020_width" class="all-options" placeholder="%1s" value="%2s" required />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_width']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_width']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_width']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_width']['title']),
 				isset($this->options['misi_szechenyi2020_width']) ? esc_attr($this->options['misi_szechenyi2020_width']) : ''
 			);
 		}
-		
-		public function misi_szechenyi2020_height_callback()
+
+        public function misi_szechenyi2020_height_callback()
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_height]" id="misi_szechenyi2020_height" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_height']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_height']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_height']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_height']['title']),
 				isset($this->options['misi_szechenyi2020_height']) ? esc_attr($this->options['misi_szechenyi2020_height']) : ''
 			);
 		}
@@ -567,7 +617,7 @@
 			
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_width_unit']['description'] . '</small>';
-			
+
 			echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
@@ -587,7 +637,7 @@
 			
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_background_color_turn_on']['description'] . '</small>';
-			
+
 			echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
@@ -600,20 +650,20 @@
 			if ($option_border_radius == 'no') {
 				$disabled = " disabled ";
 			}
-			
+
 			printf(
-				'<input type="color" name="szechenyi_2020_options[misi_szechenyi2020_background_color]" id="misi_szechenyi2020_background_color" class="all-options" value="%s"' . $disabled . '/>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_background_color']['description'] . '</small>',
+				'<input type="color" name="szechenyi_2020_options[misi_szechenyi2020_background_color]" id="misi_szechenyi2020_background_color" class="all-options" value="%s"' . esc_attr($disabled) . '/>' .
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_background_color']['description']) . '</small>',
 				isset($this->options['misi_szechenyi2020_background_color']) ? esc_attr($this->options['misi_szechenyi2020_background_color']) : ''
 			);
 		}
-		
+
 		public function misi_szechenyi2020_margin_top_callback()
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_margin_top]" id="misi_szechenyi2020_margin_top" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_margin_top']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_margin_top']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_margin_top']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_margin_top']['title']),
 				isset($this->options['misi_szechenyi2020_margin_top']) ? esc_attr($this->options['misi_szechenyi2020_margin_top']) : ''
 			);
 		}
@@ -622,8 +672,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_margin_right]" id="misi_szechenyi2020_margin_right" class="all-options" placeholder="%1s" value="%2s"/>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_margin_right']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_margin_right']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_margin_right']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_margin_right']['title']),
 				isset($this->options['misi_szechenyi2020_margin_right']) ? esc_attr($this->options['misi_szechenyi2020_margin_right']) : ''
 			);
 		}
@@ -632,8 +682,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_margin_bottom]" id="misi_szechenyi2020_margin_bottom" class="all-options" placeholder="%1s" value="%2s"/>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_margin_bottom']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_margin_bottom']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_margin_bottom']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_margin_bottom']['title']),
 				isset($this->options['misi_szechenyi2020_margin_bottom']) ? esc_attr($this->options['misi_szechenyi2020_margin_bottom']) : ''
 			);
 		}
@@ -642,8 +692,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_margin_left]" id="misi_szechenyi2020_margin_left" class="all-options" placeholder="%1s" value="%2s"/>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_margin_left']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_margin_left']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_margin_left']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_margin_left']['title']),
 				isset($this->options['misi_szechenyi2020_margin_left']) ? esc_attr($this->options['misi_szechenyi2020_margin_left']) : ''
 			);
 		}
@@ -652,8 +702,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_border_top]" id="misi_szechenyi2020_border_top" class="all-options" placeholder="%1s" value="%2s"/>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_border_top']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_border_top']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_border_top']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_border_top']['title']),
 				isset($this->options['misi_szechenyi2020_border_top']) ? esc_attr($this->options['misi_szechenyi2020_border_top']) : ''
 			);
 		}
@@ -662,8 +712,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_border_right]" id="misi_szechenyi2020_border_right" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_border_right']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_border_right']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_border_right']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_border_right']['title']),
 				isset($this->options['misi_szechenyi2020_border_right']) ? esc_attr($this->options['misi_szechenyi2020_border_right']) : ''
 			);
 		}
@@ -672,8 +722,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_border_bottom]" id="misi_szechenyi2020_border_bottom" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_border_bottom']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_border_bottom']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_border_bottom']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_border_bottom']['title']),
 				isset($this->options['misi_szechenyi2020_border_bottom']) ? esc_attr($this->options['misi_szechenyi2020_border_bottom']) : ''
 			);
 		}
@@ -682,8 +732,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_border_left]" id="misi_szechenyi2020_border_left" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_border_left']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_border_left']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_border_left']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_border_left']['title']),
 				isset($this->options['misi_szechenyi2020_border_left']) ? esc_attr($this->options['misi_szechenyi2020_border_left']) : ''
 			);
 		}
@@ -704,7 +754,7 @@
 			
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_border_type']['description'] . '</small>';
-			
+
 			echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
@@ -724,7 +774,7 @@
 			
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_border_radius']['description'] . '</small>';
-			
+
 			echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
@@ -737,9 +787,9 @@
 				$disabled = " disabled ";
 			}
 			printf(
-				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_border_radius_size]" id="misi_szechenyi2020_border_radius_size" class="all-options" placeholder="%1s" value="%2s"' . $disabled . '/>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_border_radius_size']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_border_radius_size']['title'],
+				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_border_radius_size]" id="misi_szechenyi2020_border_radius_size" class="all-options" placeholder="%1s" value="%2s"' . esc_attr($disabled) . '/>' .
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_border_radius_size']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_border_radius_size']['title']),
 				isset($this->options['misi_szechenyi2020_border_radius_size']) ? esc_attr($this->options['misi_szechenyi2020_border_radius_size']) : ''
 			);
 		}
@@ -760,7 +810,7 @@
 			
 			$html .= '</select>';
 			$html .= '<br /><small>' . $this->fillable()['misi_szechenyi2020_border_color_turn_on']['description'] . '</small>';
-			
+
 			echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
@@ -772,10 +822,10 @@
 			if ($option_border_radius == 'no') {
 				$disabled = " disabled ";
 			}
-			
+
 			printf(
-				'<input type="color" name="szechenyi_2020_options[misi_szechenyi2020_border_color]" id="misi_szechenyi2020_border_color" class="all-options" value="%s"' . $disabled . '/>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_border_color']['description'] . '</small>',
+				'<input type="color" name="szechenyi_2020_options[misi_szechenyi2020_border_color]" id="misi_szechenyi2020_border_color" class="all-options" value="%s"' . esc_attr($disabled) . '/>' .
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_border_color']['description']) . '</small>',
 				isset($this->options['misi_szechenyi2020_border_color']) ? esc_attr($this->options['misi_szechenyi2020_border_color']) : ''
 			);
 			
@@ -785,8 +835,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_padding_top]" id="misi_szechenyi2020_padding_top" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_padding_top']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_padding_top']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_padding_top']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_padding_top']['title']),
 				isset($this->options['misi_szechenyi2020_padding_top']) ? esc_attr($this->options['misi_szechenyi2020_padding_top']) : ''
 			);
 		}
@@ -795,8 +845,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_padding_right]" id="misi_szechenyi2020_padding_right" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_padding_right']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_padding_right']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_padding_right']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_padding_right']['title']),
 				isset($this->options['misi_szechenyi2020_padding_right']) ? esc_attr($this->options['misi_szechenyi2020_padding_right']) : ''
 			);
 		}
@@ -805,8 +855,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_padding_bottom]" id="misi_szechenyi2020_padding_bottom" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_padding_bottom']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_padding_bottom']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_padding_bottom']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_padding_bottom']['title']),
 				isset($this->options['misi_szechenyi2020_padding_bottom']) ? esc_attr($this->options['misi_szechenyi2020_padding_bottom']) : ''
 			);
 		}
@@ -815,8 +865,8 @@
 		{
 			printf(
 				'<input type="number" name="szechenyi_2020_options[misi_szechenyi2020_padding_left]" id="misi_szechenyi2020_padding_left" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_padding_left']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_padding_left']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_padding_left']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_padding_left']['title']),
 				isset($this->options['misi_szechenyi2020_padding_left']) ? esc_attr($this->options['misi_szechenyi2020_padding_left']) : ''
 			);
 		}
@@ -825,8 +875,8 @@
 		{
 			printf(
 				'<textarea name="szechenyi_2020_options[misi_szechenyi2020_css_custom_desktop]" id="misi_szechenyi2020_css_custom_desktop" cols="80" rows="10" class="all-options" placeholder="%1s">%2s</textarea>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_css_custom_desktop']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_css_custom_desktop']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_css_custom_desktop']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_css_custom_desktop']['title']),
 				isset($this->options['misi_szechenyi2020_css_custom_desktop']) ? esc_attr($this->options['misi_szechenyi2020_css_custom_desktop']) : ''
 			);
 		}
@@ -835,8 +885,8 @@
 		{
 			printf(
 				'<textarea name="szechenyi_2020_options[misi_szechenyi2020_css_custom_mobile]" id="misi_szechenyi2020_css_custom_mobile" cols="80" rows="10" class="all-options" placeholder="%1s">%2s</textarea>' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_css_custom_mobile']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_css_custom_mobile']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_css_custom_mobile']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_css_custom_mobile']['title']),
 				isset($this->options['misi_szechenyi2020_css_custom_mobile']) ? esc_attr($this->options['misi_szechenyi2020_css_custom_mobile']) : ''
 			);
 		}
@@ -845,8 +895,8 @@
 		{
 			printf(
 				'<input type="url" name="szechenyi_2020_options[misi_szechenyi2020_page_url]" id="misi_szechenyi2020_page_url" class="all-options" placeholder="%1s" value="%2s" />' .
-				'<br /><small>' . $this->fillable()['misi_szechenyi2020_page_url']['description'] . '</small>',
-				$this->fillable()['misi_szechenyi2020_page_url']['title'],
+				'<br /><small>' . esc_html($this->fillable()['misi_szechenyi2020_page_url']['description']) . '</small>',
+                    esc_html($this->fillable()['misi_szechenyi2020_page_url']['title']),
 				isset($this->options['misi_szechenyi2020_page_url']) ? esc_attr(esc_url($this->options['misi_szechenyi2020_page_url'])) : ''
 			
 			);
@@ -856,7 +906,7 @@
 		{
 			echo '<!--  misi_szechenyi2020_theme -->';
 			$html = array();
-			
+
 			foreach ($this->fillable()['misi_szechenyi2020_theme']['values'] as $key => $item) {
 				$tmp = '<label><input type="radio" name="szechenyi_2020_options[misi_szechenyi2020_theme]" id="misi_szechenyi2020_theme" value="' . $key . '" ';
 				if ($this->options['misi_szechenyi2020_theme'] == $key) {
@@ -867,11 +917,9 @@
 			}
 			$html = '<div>' . implode('<br />', $html) . '</div>';
 			$html .= '<small>' . $this->fillable()['misi_szechenyi2020_theme']['description'] . '</small></label';
-			
+
             echo wp_kses($html ,$this->expanded_alowed_tags());
 		}
 		
-		
 	}
-
 

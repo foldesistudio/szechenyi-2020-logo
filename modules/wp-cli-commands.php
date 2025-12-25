@@ -1,5 +1,9 @@
 <?php
-	
+/**
+ * Add WP-CLI support
+ *
+ * @package szechenyi-2020-logo
+ */
 	function is_cli_running(): bool
 	{
 		return defined('WP_CLI') && WP_CLI;
@@ -25,11 +29,11 @@
 					WP_CLI::line(WP_CLI::colorize('Version of WordPress is %G' . get_bloginfo('version') . '%n.'));
 				} //$ wp szechenyi-2020-logo version
 				else {
-					
+
 					$option = get_option('szechenyi_2020_options');
-					
+
 					WP_CLI::line(WP_CLI::colorize('Logo has been placed as %m' . $option['misi_szechenyi2020_position_place'] . ' position%n at %m' . $option['misi_szechenyi2020_position_y'] . '\'s ' . $option['misi_szechenyi2020_position_x'] . '%n side.'));
-					
+
 					WP_CLI::line(WP_CLI::colorize('Plug-in version of %YSzéchenyi 2020 Logo%n is %Yv' . SZECHENYI_2020_619_VERSION . '%n , and version of %GWordPress v' . get_bloginfo('version') . '%n.'));
 				}
 			}
@@ -38,9 +42,9 @@
 			function list_options($args, $assoc_args)
 			{
 				$options = get_option('szechenyi_2020_options');
-				
+
 				$progress = \WP_CLI\Utils\make_progress_bar("The option' values of 'szechenyi_2020_options':", $options);
-				
+
 				foreach ($options as $option_key => $option_value):
 					//$ wp szechenyi-2020-logo list_options --all-fields
 					if (!empty($assoc_args['all-fields'])):
@@ -69,11 +73,11 @@ See more information:
 * wp szechenyi-2020-logo list_options
 * developer.wordpress.org/cli/commands/option/patch
 ');
-				
+
 			}
 		}
 		
 		
 		WP_CLI::add_command('szechenyi-2020-logo', 'cli_site_info');
 	}
-	
+

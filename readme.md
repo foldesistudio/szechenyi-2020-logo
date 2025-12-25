@@ -8,24 +8,32 @@ This WordPress plugin places a Széchenyi 2020 logo on the frontend at any posit
 **Donate link:** [PayPal](https://www.paypal.com/donate/?business=47DJVT44PCDGW&no_recurring=0&currency_code=HUF)
 
 **Tags:** floating content, floating logo, floating sidebar, floating wordpress sidebar, hungary, logo, popup, scrolling banner, scrolling sidebar, static block,
-sticky advertising, sticky sidebar, szechenyi, szechenyi 2020, szechenyi 2020 logo, wordpress sticky plugin
+sticky advertising, sticky sidebar, szechenyi, szechenyi 2020, szechenyi 2020 logo, wordpress sticky plugin, Széchenyi Plusz, Széchenyi Terv, Széchenyi Terv Plusz, Demján Sándor, Demján Sándor Program
 
-**Requires at least:** 5.0  
+**Requires at least:** 5.2
 
-**Tested up to:** 6.2
+**Tested up to:** 6.9
 
-**Requires PHP:** 7.0
+**Requires PHP:** 7.4
 
-**Stable tag:** 1.1
+**Stable tag:** 1.2
 
 **License:** [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 
 ## Description ##
 
-Széchenyi 2020 Logo is an all-in-one plug-in with easy-to-use controls. It helps you place a Széchenyi logo as a sticky footer or sticky header. If you wish, you can modify the default placing parameters manually.
+### Széchenyi 2020 Logo ### 
 
-All settings parameters are stored as transients. This means that the final rendered HTML and CSS source codes on the front end are stored in the WordPress cache system.
+The Széchenyi 2020 Logo plugin is an all-in-one solution with user-friendly controls that enables you to place a Széchenyi logo as a sticky footer or header on your website.
+
+Additionally, you can modify the default placement parameters manually using the admin page or WP-CLI commands.
+
+All settings parameters are stored as transients, which means that the final rendered HTML and CSS source codes on the frontend are cached by WordPress for improved performance.
+
+### Széchenyi Plus Logo ### 
+
+There is a new plugin, you can now download the "[Széchenyi Plus Logo](http://wordpress.org/plugins/szechenyi-plus-logo/)" plugin from the official WordPress repository to display the latest "Széchenyi Terv Plusz" logo. Feel free to use it!
 
 ## Languages ##
 
@@ -49,6 +57,9 @@ This is an unofficial plug-in and completely a hobby project. Széchenyi logos s
 
 ## Frequently Asked Questions ##
 
+### How to use it for other logos? ###
+This plugin displays only the Széchenyi 2020 logo. However, you can contact us on [Földesi Videó Stódió](https://foldesistudio.hu/kapcsolat/) official website to request a custom version of this plugin for other logos.
+
 ### Can I control floating logo to display only on selected pages / posts / categories? ###
 No, you cannot. After activating, the floating logo is displayed on all parts of your website.
 
@@ -65,24 +76,43 @@ Use `wp szechenyi-2020-logo help` in the command-line to learn more about basic 
 ### Is it the official plugin? ###
 No, it is not. This is a hobby project.
 
+### Where do used logos come from? ###
+
+Széchenyi logos source from szechenyi2020.hu
+
+### Where do I report security bugs found in this plugin? ###
+
+Please report security bugs found in the source code of the Széchenyi 2020 Logo plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/18e9899f-f66d-499f-a145-640e7cc50274). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+
+
 
 ## Changelog ##
+
+### 1.2 ###
+* General security improvements and including a fix for an LFI vulnerability
+* Added an optional close button for the floating logo
+* Added widget support
+* Added Gutenberg block support
 
 ### 1.1 ###
 * Added WP-CLI support (see `wp szechenyi-2020-logo help` command)
 * Fixed transients clearing
-* Improved loading rendering
+* Improved loading and rendering
  
 ### 1.0 ###
 * Initial Release
 
 ## Upgrade Notice ##
 
-### 1.1 ###
+### 1.2 ###
+* General security improvements and including a fix for an LFI vulnerability
+* Added a Gutenberg block, widget support and an optional close button for the floating logo
+
+* ### 1.1 ###
 * Added WP-CLI support and some improvements
 
 ### 1.0 ###
-* Initial release thus no upgrade notice
+* Initial release, thus no upgrade notice
 
 
 

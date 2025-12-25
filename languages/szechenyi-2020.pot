@@ -1,89 +1,50 @@
-# Copyright (C) 2022 Földesi Mihály
-# This file is distributed under the same license as the Széchenyi 2020 Logo plugin.
+# Copyright (C) 2025 Földesi Mihály
+# This file is distributed under the Attribution 4.0 International (CC BY 4.0).
 msgid ""
 msgstr ""
-"Project-Id-Version: Széchenyi 2020 Logo 1.1\n"
+"Project-Id-Version: Széchenyi 2020 Logo 1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/szechenyi-2020-logo\n"
-"Last-Translator: FÖLDESI, MIHÁLY\n"
-"Language-Team: ENGLISH\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-01-03T10:55:25+01:00\n"
+"POT-Creation-Date: 2025-12-25T12:07:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: szechenyi-2020\n"
 
 #. Plugin Name of the plugin
-#: modules/admin-settings-page.php:347
-#: modules/admin-settings-page.php:348
-#: modules/admin-settings-page.php:403
+#: szechenyi-2020-logo.php
+#: modules/admin-notification.php:20
+#: modules/admin-settings-page.php:340
+#: modules/admin-settings-page.php:341
+#: modules/admin-settings-page.php:392
 #: modules/plugin-page.php:44
+#: modules/wp-gutenberg-block.php:96
+#: modules/wp-widget.php:16
+#: assets/js/wp-block-editor.js:15
 msgid "Széchenyi 2020 Logo"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: szechenyi-2020-logo.php
 msgid "https://foldesistudio.hu/szechenyi-2020-logo"
 msgstr ""
 
 #. Description of the plugin
+#: szechenyi-2020-logo.php
 msgid "This plugin places a Széchenyi 2020 logo to the frontend to any position."
 msgstr ""
 
 #. Author of the plugin
+#: szechenyi-2020-logo.php
 msgid "Földesi Mihály"
 msgstr ""
 
 #. Author URI of the plugin
+#: szechenyi-2020-logo.php
 msgid "https://foldesistudio.hu"
-msgstr ""
-
-#: libs/admin/about.php:7
-msgid "Author"
-msgstr ""
-
-#: libs/admin/about.php:12
-msgid "Developer"
-msgstr ""
-
-#: libs/admin/about.php:13
-msgid "Mihály Földesi"
-msgstr ""
-
-#: libs/admin/about.php:17
-msgid "Website"
-msgstr ""
-
-#: libs/admin/about.php:23
-msgid "Facebook"
-msgstr ""
-
-#: libs/admin/about.php:29
-msgid "Additional Thanks"
-msgstr ""
-
-#: libs/admin/about.php:31
-msgid "Dovi42 | (wpcreator.hu)"
-msgstr ""
-
-#: libs/admin/about.php:32
-msgid "Péter Földesi"
-msgstr ""
-
-#: libs/admin/sortcode.php:6
-msgid "Insert shortcode"
-msgstr ""
-
-#: libs/admin/sortcode.php:12
-msgid "Current slug:"
-msgstr ""
-
-#: libs/admin/sortcode.php:16
-msgid "Insert content from shortcode:"
-msgstr ""
-
-#: libs/shortcodes/szechenyi-2020-logo-debug.php:141
-msgid "Széchenyi 2020 message:"
 msgstr ""
 
 #: modules/admin-credits.php:29
@@ -106,376 +67,425 @@ msgstr ""
 msgid "Join us on Github"
 msgstr ""
 
-#: modules/admin-notification.php:9
-msgid "Széchenyi 2020"
-msgstr ""
-
-#. translators: %s is replaced with "URL"
-#: modules/admin-notification.php:11
+#. translators: %s is the reviews URL.
+#: modules/admin-notification.php:24
+#, php-format
 msgid "Please don't forget to <a href=\"%s\" target=\"_blank\">rate the plugin!</a>"
 msgstr ""
 
-#: modules/admin-settings-page.php:38
+#: modules/admin-settings-page.php:43
 msgid "Széchenyi 2020 Custom Settings"
 msgstr ""
 
-#: modules/admin-settings-page.php:67
+#: modules/admin-settings-page.php:72
 msgid "Position Place"
 msgstr ""
 
-#: modules/admin-settings-page.php:68
+#: modules/admin-settings-page.php:73
 msgid "This specifies the type of positioning method used for logo element. If fixed is selected,  it is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled."
 msgstr ""
 
-#: modules/admin-settings-page.php:70
+#: modules/admin-settings-page.php:75
 msgid "Fixed"
 msgstr ""
 
-#: modules/admin-settings-page.php:71
+#: modules/admin-settings-page.php:76
 msgid "Absolute"
 msgstr ""
 
-#: modules/admin-settings-page.php:75
+#: modules/admin-settings-page.php:80
 msgid "Vertical Position"
 msgstr ""
 
-#: modules/admin-settings-page.php:76
+#: modules/admin-settings-page.php:81
 msgid "This affects the vertical position of a positioned logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:78
+#: modules/admin-settings-page.php:83
 msgid "Top"
 msgstr ""
 
-#: modules/admin-settings-page.php:79
+#: modules/admin-settings-page.php:84
 msgid "Bottom"
 msgstr ""
 
-#: modules/admin-settings-page.php:83
+#: modules/admin-settings-page.php:88
 msgid "Horizontal Position"
 msgstr ""
 
-#: modules/admin-settings-page.php:84
+#: modules/admin-settings-page.php:89
 msgid "This affects the horizontal position of a positioned logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:86
+#: modules/admin-settings-page.php:91
 msgid "Left"
 msgstr ""
 
-#: modules/admin-settings-page.php:87
+#: modules/admin-settings-page.php:92
 msgid "Right"
 msgstr ""
 
-#: modules/admin-settings-page.php:91
+#: modules/admin-settings-page.php:96
 msgid "Close Button"
 msgstr ""
 
-#: modules/admin-settings-page.php:92
+#: modules/admin-settings-page.php:97
 msgid "This affects to turn the logo element to closeable."
 msgstr ""
 
-#: modules/admin-settings-page.php:94
-#: modules/admin-settings-page.php:118
-#: modules/admin-settings-page.php:177
+#: modules/admin-settings-page.php:99
+#: modules/admin-settings-page.php:123
+#: modules/admin-settings-page.php:182
 msgid "Yes"
 msgstr ""
 
-#: modules/admin-settings-page.php:95
-#: modules/admin-settings-page.php:119
-#: modules/admin-settings-page.php:178
+#: modules/admin-settings-page.php:100
+#: modules/admin-settings-page.php:124
+#: modules/admin-settings-page.php:183
 msgid "No"
 msgstr ""
 
-#: modules/admin-settings-page.php:99
+#: modules/admin-settings-page.php:104
 msgid "Width"
 msgstr ""
 
-#: modules/admin-settings-page.php:100
+#: modules/admin-settings-page.php:105
 msgid "This sets the width of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:103
+#: modules/admin-settings-page.php:108
 msgid "Height"
 msgstr ""
 
-#: modules/admin-settings-page.php:104
+#: modules/admin-settings-page.php:109
 msgid "This sets the height of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:107
+#: modules/admin-settings-page.php:112
 msgid "Unit"
 msgstr ""
 
-#: modules/admin-settings-page.php:108
+#: modules/admin-settings-page.php:113
 msgid "Type of sizing. If percentages is selected, it allows the sizing of logo element relative to their containing page."
 msgstr ""
 
-#: modules/admin-settings-page.php:110
+#: modules/admin-settings-page.php:115
 msgid "Pixel"
 msgstr ""
 
-#: modules/admin-settings-page.php:111
+#: modules/admin-settings-page.php:116
 msgid "Percent"
 msgstr ""
 
-#: modules/admin-settings-page.php:115
+#: modules/admin-settings-page.php:120
 msgid "Background Color"
 msgstr ""
 
-#: modules/admin-settings-page.php:116
+#: modules/admin-settings-page.php:121
 msgid "This sets the background color of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:123
+#: modules/admin-settings-page.php:128
 msgid "Set Background Color"
 msgstr ""
 
-#: modules/admin-settings-page.php:124
+#: modules/admin-settings-page.php:129
 msgid "Specifies the background color."
 msgstr ""
 
-#: modules/admin-settings-page.php:127
+#: modules/admin-settings-page.php:132
 msgid "Margin Top"
 msgstr ""
 
-#: modules/admin-settings-page.php:128
+#: modules/admin-settings-page.php:133
 msgid "This sets the top margin of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:131
+#: modules/admin-settings-page.php:136
 msgid "Margin Right"
 msgstr ""
 
-#: modules/admin-settings-page.php:132
+#: modules/admin-settings-page.php:137
 msgid "This sets the right margin of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:135
+#: modules/admin-settings-page.php:140
 msgid "Margin Bottom"
 msgstr ""
 
-#: modules/admin-settings-page.php:136
+#: modules/admin-settings-page.php:141
 msgid "This sets the bottom margin of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:139
+#: modules/admin-settings-page.php:144
 msgid "Margin Left"
 msgstr ""
 
-#: modules/admin-settings-page.php:140
+#: modules/admin-settings-page.php:145
 msgid "This sets the left margin of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:143
+#: modules/admin-settings-page.php:148
 msgid "Border Top"
 msgstr ""
 
-#: modules/admin-settings-page.php:144
+#: modules/admin-settings-page.php:149
 msgid "This sets the top border of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:147
+#: modules/admin-settings-page.php:152
 msgid "Border Right"
 msgstr ""
 
-#: modules/admin-settings-page.php:148
+#: modules/admin-settings-page.php:153
 msgid "This sets the right border of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:151
+#: modules/admin-settings-page.php:156
 msgid "Border Bottom"
 msgstr ""
 
-#: modules/admin-settings-page.php:152
+#: modules/admin-settings-page.php:157
 msgid "This sets the bottom border of logo element."
 msgstr ""
 
-#: modules/admin-settings-page.php:155
+#: modules/admin-settings-page.php:160
 msgid "Border Left"
 msgstr ""
 
-#: modules/admin-settings-page.php:156
+#: modules/admin-settings-page.php:161
 msgid "Border left Description"
 msgstr ""
 
-#: modules/admin-settings-page.php:159
+#: modules/admin-settings-page.php:164
 msgid "Border Type"
 msgstr ""
 
-#: modules/admin-settings-page.php:160
+#: modules/admin-settings-page.php:165
 msgid "This sets the style of logo element's  border"
 msgstr ""
 
-#: modules/admin-settings-page.php:162
-#: modules/admin-settings-page.php:229
+#: modules/admin-settings-page.php:167
+#: modules/admin-settings-page.php:234
 msgid "None"
 msgstr ""
 
-#: modules/admin-settings-page.php:163
+#: modules/admin-settings-page.php:168
 msgid "Dashed"
 msgstr ""
 
-#: modules/admin-settings-page.php:164
+#: modules/admin-settings-page.php:169
 msgid "Dotted"
 msgstr ""
 
-#: modules/admin-settings-page.php:165
+#: modules/admin-settings-page.php:170
 msgid "Double"
 msgstr ""
 
-#: modules/admin-settings-page.php:166
+#: modules/admin-settings-page.php:171
 msgid "Groove"
 msgstr ""
 
-#: modules/admin-settings-page.php:167
+#: modules/admin-settings-page.php:172
 msgid "Inset"
 msgstr ""
 
-#: modules/admin-settings-page.php:168
+#: modules/admin-settings-page.php:173
 msgid "Outset"
 msgstr ""
 
-#: modules/admin-settings-page.php:169
+#: modules/admin-settings-page.php:174
 msgid "Ridge"
 msgstr ""
 
-#: modules/admin-settings-page.php:170
+#: modules/admin-settings-page.php:175
 msgid "Solid"
 msgstr ""
 
-#: modules/admin-settings-page.php:174
+#: modules/admin-settings-page.php:179
 msgid "Border Color"
 msgstr ""
 
-#: modules/admin-settings-page.php:175
+#: modules/admin-settings-page.php:180
 msgid "This sets the color of logo element's all borders."
 msgstr ""
 
-#: modules/admin-settings-page.php:182
+#: modules/admin-settings-page.php:187
 msgid "Set Border Color"
 msgstr ""
 
-#: modules/admin-settings-page.php:183
+#: modules/admin-settings-page.php:188
 msgid "Specifies the border color."
 msgstr ""
 
-#: modules/admin-settings-page.php:186
+#: modules/admin-settings-page.php:191
 msgid "Border Radius"
 msgstr ""
 
-#: modules/admin-settings-page.php:187
+#: modules/admin-settings-page.php:192
 msgid "This affects the sort of logo element's border style."
 msgstr ""
 
-#: modules/admin-settings-page.php:189
+#: modules/admin-settings-page.php:194
 msgid "Straight Cornor"
 msgstr ""
 
-#: modules/admin-settings-page.php:190
+#: modules/admin-settings-page.php:195
 msgid "Round Cornor"
 msgstr ""
 
-#: modules/admin-settings-page.php:194
+#: modules/admin-settings-page.php:199
 msgid "Border Radius Size"
 msgstr ""
 
-#: modules/admin-settings-page.php:195
+#: modules/admin-settings-page.php:200
 msgid "This defines the radius of the logo element's corners. You can set it Round Cornor is selected."
 msgstr ""
 
-#: modules/admin-settings-page.php:198
+#: modules/admin-settings-page.php:203
 msgid "Padding Top"
 msgstr ""
 
-#: modules/admin-settings-page.php:199
+#: modules/admin-settings-page.php:204
 msgid " This sets top space between logo element and its top border."
 msgstr ""
 
-#: modules/admin-settings-page.php:202
+#: modules/admin-settings-page.php:207
 msgid "Padding Right"
 msgstr ""
 
-#: modules/admin-settings-page.php:203
+#: modules/admin-settings-page.php:208
 msgid "This sets right space between logo element and its right border."
 msgstr ""
 
-#: modules/admin-settings-page.php:206
+#: modules/admin-settings-page.php:211
 msgid "Padding Bottom"
 msgstr ""
 
-#: modules/admin-settings-page.php:207
+#: modules/admin-settings-page.php:212
 msgid "This sets bottom space between logo element and its bottom border."
 msgstr ""
 
-#: modules/admin-settings-page.php:210
+#: modules/admin-settings-page.php:215
 msgid "Padding Left"
 msgstr ""
 
-#: modules/admin-settings-page.php:211
+#: modules/admin-settings-page.php:216
 msgid "This sets left space between logo element and its left border."
 msgstr ""
 
-#: modules/admin-settings-page.php:214
+#: modules/admin-settings-page.php:219
 msgid "Custom CSS for Desktop"
 msgstr ""
 
-#: modules/admin-settings-page.php:215
+#: modules/admin-settings-page.php:220
 msgid "This sets custom css for desktop sizes."
 msgstr ""
 
-#: modules/admin-settings-page.php:218
+#: modules/admin-settings-page.php:223
 msgid "Custom CSS for Mobile"
 msgstr ""
 
-#: modules/admin-settings-page.php:219
+#: modules/admin-settings-page.php:224
 msgid "This sets custom css for mobile sizes."
 msgstr ""
 
-#: modules/admin-settings-page.php:222
+#: modules/admin-settings-page.php:227
 msgid "Page URL"
 msgstr ""
 
-#: modules/admin-settings-page.php:223
+#: modules/admin-settings-page.php:228
 msgid "This sets page address of destination."
 msgstr ""
 
-#: modules/admin-settings-page.php:226
+#: modules/admin-settings-page.php:231
 msgid "Theme Fix"
 msgstr ""
 
-#: modules/admin-settings-page.php:227
+#: modules/admin-settings-page.php:232
 msgid "This sets some CSS fixes for theme. Sometimes logo element hides functionality of scroll to top."
 msgstr ""
 
-#: modules/admin-settings-page.php:230
+#: modules/admin-settings-page.php:235
 msgid "Divi"
 msgstr ""
 
-#: modules/admin-settings-page.php:231
+#: modules/admin-settings-page.php:236
 msgid "Enfold"
 msgstr ""
 
-#: modules/admin-settings-page.php:364
+#: modules/admin-settings-page.php:358
 msgid "Setup"
 msgstr ""
 
-#: modules/admin-settings-page.php:365
+#: modules/admin-settings-page.php:359
+#: modules/admin-settings-page.php:427
+msgid "Change Logo"
+msgstr ""
+
+#: modules/admin-settings-page.php:360
 msgid "About"
 msgstr ""
 
-#: modules/admin-settings-page.php:449
+#: modules/admin-settings-page.php:430
+msgid "This plugin is designed to display a single logo in a clean and reliable way. Do you need a different logo or a fully branded variant? If you need to change the logo image, please contact the developer."
+msgstr ""
+
+#: modules/admin-settings-page.php:434
+#: modules/admin-settings-page.php:456
+msgid "Developer"
+msgstr ""
+
+#: modules/admin-settings-page.php:435
+#: modules/admin-settings-page.php:457
+msgid "Mihály Földesi"
+msgstr ""
+
+#: modules/admin-settings-page.php:439
+#: modules/admin-settings-page.php:461
+msgid "Website"
+msgstr ""
+
+#: modules/admin-settings-page.php:452
+msgid "Author"
+msgstr ""
+
+#: modules/admin-settings-page.php:466
+msgid "Facebook"
+msgstr ""
+
+#: modules/admin-settings-page.php:472
+msgid "Additional Thanks"
+msgstr ""
+
+#: modules/admin-settings-page.php:474
+msgid "Dovi42 | (wpcreator.hu)"
+msgstr ""
+
+#: modules/admin-settings-page.php:475
+msgid "Péter Földesi"
+msgstr ""
+
+#: modules/admin-settings-page.php:499
 msgid "Welcome on admin settings page of Széchenyi 2020 Logo. If you would like you can modify default parameters manually with this form. The current default settings are for guidance only. The developer of the plug-in assumes no any responsibility. "
 msgstr ""
 
-#: modules/frontend.php:169
+#: modules/frontend.php:174
 msgid "Széchenyi 2020 logo at bottom position"
 msgstr ""
 
-#: modules/frontend.php:171
+#: modules/frontend.php:176
 msgid "Széchenyi 2020 logo at top position"
 msgstr ""
 
 #: modules/plugin-page.php:16
 msgid "Please rating!"
+msgstr ""
+
+#: modules/wp-widget.php:17
+msgid "This widget displays a Széchenyi 2020 logo and adds a link to it."
+msgstr ""
+
+#: modules/wp-widget.php:73
+msgid "Széchenyi 2020 logo widget image"
 msgstr ""
